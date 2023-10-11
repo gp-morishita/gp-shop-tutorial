@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\StockTableSeeder;
+use Database\Seeders\MineTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,11 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $this->call(StockTableSeeder::class); //追記
+        $this->call(MineTableSeeder::class); //追記
     }
 }
